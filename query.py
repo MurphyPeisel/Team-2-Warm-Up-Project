@@ -60,3 +60,48 @@ while parsed_query == -1:
 print(parsed_query)
 
 #TODO: every query is a list, even non-compound queries. to evaluate, make sure to do "for x in parsed_query" and evaluate all parts
+
+
+#%%
+# Terms that will bring up the help output
+HELP_LIST = ["help", "?"]
+EXIT_LIST = ["exit", "stop", "logout", "quit", "signout"]
+
+def get_help():
+    """
+    Prints out a string to help clarify operations for the user
+    """
+    
+    print(""""
+    You've accessed the help screen
+    
+    Enter exit, stop, logout, quit, signout to stop the program
+    """)
+    
+
+# Query Engine: 
+def query_engine():
+    while True:
+        user_input = get_input()
+        
+        # Allow user to call for help at any time
+        while user_input in HELP_LIST:
+            get_help()
+            user_input = get_input()
+            
+        # Allow user to exit the program at any time
+        if user_input in EXIT_LIST:
+            return
+        
+        parsed_query = parse_input(user_input)
+        
+        # make sure parsed_query is in right format, running until it is
+        if parsed_query != -1:
+            # Proceed with querying database, otherwise start over
+            print(parsed_query)
+            
+            # Call upon firebaseAuth function with the parsed query
+            
+            
+        
+query_engine()

@@ -100,7 +100,7 @@ def query_engine():
         # make sure parsed_query is in right format, running until it is
         if parsed_query != -1:
             # Proceed with querying database, otherwise start over
-            print(parsed_query)
+            pass
             
             # Call upon firebaseAuth function with the parsed query
             

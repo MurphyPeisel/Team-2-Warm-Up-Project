@@ -61,7 +61,7 @@ print(parsed_query)
 
 
 #%%
-import firebaseAuth
+# import firebaseAuth
 
 # Terms that will bring up the help output
 HELP_LIST = ["help", "?"]
@@ -81,6 +81,9 @@ def get_help():
 
 # Query Engine: 
 def query_engine():
+    """
+    Loops to allow user input that will be used to query the database
+    """
     while True:
         user_input = get_input()
         
@@ -98,9 +101,9 @@ def query_engine():
         # make sure parsed_query is in right format, running until it is
         if parsed_query != -1:
             # Proceed with querying database, otherwise start over
-            pass
             
             # Call upon firebaseAuth function with the parsed query
+            pass
             
             
         

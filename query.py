@@ -65,7 +65,7 @@ print(parsed_query)
 #%%
 # Terms that will bring up the help output
 HELP_LIST = ["help", "?"]
-EXIT_LIST = ["exit", "quit", "logout", "signout"]
+EXIT_LIST = ["exit", "stop", "logout", "quit", "signout"]
 
 def get_help():
     """
@@ -73,7 +73,9 @@ def get_help():
     """
     
     print(""""
+    You've accessed the help screen
     
+    Enter exit, stop, logout, quit, signout to stop the program
     """)
     
 
@@ -82,21 +84,18 @@ def query_engine():
     while True:
         user_input = get_input()
         
-        # Allow user to exit the program at any time
-        if user_input in EXIT_LIST:
-            return
-        
         # Allow user to call for help at any time
         while user_input in HELP_LIST:
             get_help()
             user_input = get_input()
+            
+        # Allow user to exit the program at any time
+        if user_input in EXIT_LIST:
+            return
         
         parsed_query = parse_input(user_input)
+        
         # make sure parsed_query is in right format, running until it is
-        while parsed_query == -1:
-            user_input = get_input()
-            parsed_query = parse_input(user_input)
-            
         if parsed_query != -1:
             # Proceed with querying database, otherwise start over
             print(parsed_query)

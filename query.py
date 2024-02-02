@@ -1,4 +1,8 @@
-FIELDS = ["city", "money", "hola"]
+import shlex 
+
+# initialize valid fields and operators list
+FIELDS = ["title", "year", "runtime", "genre", "imdb_rating", "director", "star1", 
+          "star2","star3", "star4", "num_votes", "certificate", "meta_score", "gross"]
 OPERATORS = ["==", "!=", "<", "<=", ">", ">="]
 
 def get_input(): 
@@ -14,6 +18,7 @@ def parse_input(in_string):
 
     Returns:
     ERROR -- indicates an error has occurred (-1)
+    parsed_query -- list of dictionaries where each dictionary is a subquery
     """
     # queries are held in a list of dictionaries where each dictionary is a query with keys field, operator, value
     NUM_PARTS = 3 # number of parts in a query (field, operator, value)
@@ -25,7 +30,8 @@ def parse_input(in_string):
     parsed_query = []
     query_dict = {}
     for query in query_list:
-        query = query.split(" ")
+        query = shlex.split(query)
+        
         # validate query has correct number of parts
         if len(query) != NUM_PARTS:
             print("ERROR --  Invalid query structure: Please use command 'help' for help formatting queries.")
@@ -53,5 +59,4 @@ while parsed_query == -1:
     
 print(parsed_query)
 
-#TODO: need global list of valid operators and fields
 #TODO: every query is a list, even non-compound queries. to evaluate, make sure to do "for x in parsed_query" and evaluate all parts

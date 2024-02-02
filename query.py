@@ -3,7 +3,7 @@ import shlex
 # initialize valid fields and operators list
 FIELDS = ["title", "year", "runtime", "genre", "imdb_rating", "director", "star1", 
           "star2","star3", "star4", "num_votes", "certificate", "meta_score", "gross"]
-OPERATORS = ["==", "!=", "<", "<=", ">", ">="]
+OPERATORS = ["==", "!=", "<", "<=", ">", ">=", "in"]
 
 def get_input(): 
     """Receive keyboard input from user."""

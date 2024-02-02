@@ -63,6 +63,8 @@ print(parsed_query)
 
 
 #%%
+import firebaseAuth
+
 # Terms that will bring up the help output
 HELP_LIST = ["help", "?"]
 EXIT_LIST = ["exit", "stop", "logout", "quit", "signout"]

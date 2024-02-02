@@ -31,7 +31,6 @@ def parse_input(in_string):
     query_dict = {}
     for query in query_list:
         query = shlex.split(query)
-        
         # validate query has correct number of parts
         if len(query) != NUM_PARTS:
             print("ERROR --  Invalid query structure: Please use command 'help' for help formatting queries.")
@@ -47,7 +46,6 @@ def parse_input(in_string):
         query_dict = {"field": query_field, "operator": query_operator, "value": query_value}
         # add to parsed query
         parsed_query.append(query_dict)
-    
     return parsed_query
     
 user_input = get_input()

@@ -60,3 +60,40 @@ while parsed_query == -1:
 print(parsed_query)
 
 #TODO: every query is a list, even non-compound queries. to evaluate, make sure to do "for x in parsed_query" and evaluate all parts
+
+# Terms that will bring up the help output
+HELP_LIST = ["help", "?"]
+EXIT_LIST = ["exit", "quit", "logout", "signout"]
+
+def get_help():
+    
+    print(""""
+    
+    
+    
+    """)
+    
+
+
+# Query Engine: 
+def query_engine():
+    while True:
+        user_input = get_input()
+        
+        # Allow user to exit the program at any time
+        if user_input in EXIT_LIST:
+            return
+        
+        while user_input in HELP_LIST:
+            get_help()
+            user_input = get_input()
+        
+        parsed_query = parse_input(user_input)
+        # make sure parsed_query is in right format, running until it is
+        while parsed_query == -1:
+            user_input = get_input()
+            parsed_query = parse_input(user_input)
+    
+        print(parsed_query)
+        
+query_engine()

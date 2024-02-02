@@ -98,11 +98,22 @@ def query_engine():
         
         parsed_query = parse_input(user_input)
         
-        # make sure parsed_query is in right format, running until it is
+        # Proceed with querying database if the query is valid
         if parsed_query != -1:
-            # Proceed with querying database, otherwise start over
             
-            # Call upon firebaseAuth function with the parsed query
+            # At this point, parsed_query will be a list of dictionaries,
+            # each with the following keys:
+                # field, operator, and value
+            
+            # Sequential items in the parsed_query are to be intersected
+            # This intersection will occur either here or in the statement to
+            # the database
+            
+            # Call a function to query the database with the values stored
+            # in the parsed query
+            # Receive a list of movie objects that fit the query,
+            # print the title and year of each item
+            
             pass
             
             

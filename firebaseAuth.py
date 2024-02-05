@@ -30,5 +30,7 @@ async def readData():
 
 
 def main():
-  asyncio.run(addDocument('movies.json'))
-# asyncio.run(readDocument())
+  #asyncio.run(addDocument('movies.json'))
+  asyncio.run(readData())
+
+main()

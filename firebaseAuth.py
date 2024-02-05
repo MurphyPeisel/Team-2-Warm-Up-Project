@@ -3,7 +3,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore_async
 import asyncio
-import csv
+import json
 
 
 cred = credentials.Certificate("team-2-key.json")
@@ -11,35 +11,15 @@ app = firebase_admin.initialize_app(cred)
 
 db = firestore_async.client()
 
-async def addDocument():
-  with open('imdb_top_49_edited.csv', 'r') as csv_file:
+# this is the function for adding the json file to our collection
+async def addDocument(json_file):
 
-    # creating csv reader
-    csv_reader = csv.reader(csv_file)
-    # skip header of csv file
-    next(csv_reader)
-    for row in csv_reader:
-      doc_ref = db.collection("movies").document(row[0])
-      await doc_ref.set(
-          {
-      "certificate": row[2],
-      "director": row[7],
-      "genre": row[4],
-      "gross": row[13],
-      "imdb_rating": row[5],
-      "meta_score": row[6],
-      "num_votes": row[12],
-      "runtime": row[3],
-      "stars": {
-        "star1":row[8] ,
-        "star2": row[9],
-        "star3": row[10],
-        "star4": row[11]
-      },
-      "title": row[0],
-      "year": row[1]
-    }
-      )
+  with open(json_file, 'r') as file:
+    json_data = json.load(file)
+
+    for item in json_data:
+      doc_ref = db.collection("movies").document(item['title'])
+      await doc_ref.set(item)
 
 async def readData():
   users_ref = db.collection("movies")
@@ -49,5 +29,6 @@ async def readData():
     print(f"{doc.id} => {doc.to_dict()}")
 
 
-# asyncio.run(addDocument())
+def main():
+  asyncio.run(addDocument('movies.json'))
 # asyncio.run(readDocument())

@@ -3,6 +3,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore_async
 import asyncio
+import csv
 
 
 cred = credentials.Certificate("movies-database-f449c-firebase-adminsdk-rh05s-7d539e0132.json")
@@ -11,30 +12,36 @@ app = firebase_admin.initialize_app(cred)
 db = firestore_async.client()
 
 async def addDocument():
-  doc_ref = db.collection("movies").document("Shawshank Redemption")
-  await doc_ref.set(
-      {
-  "certificate": "A",
-  "director": "Francis Ford Coppola",
-  "genre": "Drama",
-  "gross": 28341469,
-  "imdb_rating": 9.3,
-  "meta_score": 80,
-  "num_votes": 2343110,
-  "runtime": 142,
-  "stars": {
-    "star1": "Tim Robbins",
-    "star2": "Morgan Freeman",
-    "star3": "Bob Gunton",
-    "star4": "William Sadler"
-  },
-  "title": "The Shawshank Redemption",
-  "year": 1994
-}
-  )
+  with open('imdb_top_49_edited.csv', 'r') as csv_file:
+
+    # creating csv reader
+    csv_reader = csv.reader(csv_file)
+    # skip header of csv file
+    next(csv_reader)
+    for row in csv_reader:
+      doc_ref = db.collection("movies").document(row[0])
+      await doc_ref.set(
+          {
+      "certificate": row[2],
+      "director": row[7],
+      "genre": row[4],
+      "gross": row[13],
+      "imdb_rating": row[5],
+      "meta_score": row[6],
+      "num_votes": row[12],
+      "runtime": row[3],
+      "stars": {
+        "star1":row[8] ,
+        "star2": row[9],
+        "star3": row[10],
+        "star4": row[11]
+      },
+      "title": row[0],
+      "year": row[1]
+    }
+      )
 
 async def readData():
-  # print("done")
   users_ref = db.collection("movies")
   docs = users_ref.stream()
 
@@ -42,4 +49,5 @@ async def readData():
     print(f"{doc.id} => {doc.to_dict()}")
 
 
-asyncio.run(readData())
+# asyncio.run(addDocument())
+# asyncio.run(readDocument())

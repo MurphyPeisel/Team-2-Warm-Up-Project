@@ -6,7 +6,7 @@ import asyncio
 import csv
 
 
-cred = credentials.Certificate("movies-database-f449c-firebase-adminsdk-rh05s-7d539e0132.json")
+cred = credentials.Certificate("team-2-key.json")
 app = firebase_admin.initialize_app(cred)
 
 db = firestore_async.client()

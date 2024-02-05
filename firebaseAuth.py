@@ -28,6 +28,7 @@ async def readData():
   async for doc in docs:
     print(f"{doc.id} => {doc.to_dict()}")
 
+# still need to figure out how this will interact with the query program. Should we just pull all the documents and then parse through, or should each query get only what is requested from the database. also still need to make class objects of the data, that will probably help with querying a lot actually. 
 
 def main():
   #asyncio.run(addDocument('movies.json'))

@@ -1,8 +1,8 @@
+from google.cloud.firestore import FieldFilter
 
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
-import asyncio
 import json
 
 class Movie:
@@ -85,17 +85,30 @@ def addDocument(json_file):
       )
 
 def getData():
-  users_ref = db.collection("movies")
-  docs = users_ref.stream()
+  # parse through dictionaries in list of queries
+  query_list = [{'field': 'year', 'operator': '>', 'value': '1990'}, {'field': 'director', 'operator': '==', 'value': 'Christopher Nolan'}]
+  # going to get all movie objects that have been queried, and put them in a list
+
+  movies_ref = db.collection("movies")
+  query = movies_ref
+  for query_info in query_list:
+    field = query_info['field']
+    operator = query_info['operator']
+    value = query_info['value']
+    
+    if operator == '<':
+        query = query.where(filter=FieldFilter(field, '<', value))
+    elif operator == '==':
+        query = query.where(filter=FieldFilter(field, '==', value))
+        
+  docs = (query.stream())
 
   for doc in docs:
-    print(f"{doc.id} => {doc.to_dict()}")
-
-# still need to figure out how this will interact with the query program. Should we just pull all the documents and then parse through, or should each query get only what is requested from the database. also still need to make class objects of the data, that will probably help with querying a lot actually. 
+      print(f"{doc.id} => {doc.to_dict()}")
+  # return docs
 
 def main():
-  
-  addDocument('movies.json')
-  # asyncio.run(getData())
+  # addDocument('movies.json')
+  getData()
 
 main()

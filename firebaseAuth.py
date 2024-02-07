@@ -84,11 +84,7 @@ def addDocument(json_file):
         ).to_dict()
       )
 
-def getData():
-  # parse through dictionaries in list of queries
-  query_list = [{'field': 'year', 'operator': '>', 'value': '1990'}, {'field': 'director', 'operator': '==', 'value': 'Christopher Nolan'}]
-  # going to get all movie objects that have been queried, and put them in a list
-
+def getData(query_list):
   movies_ref = db.collection("movies")
   query = movies_ref
   for query_info in query_list:
@@ -103,12 +99,16 @@ def getData():
         
   docs = (query.stream())
 
-  for doc in docs:
-      print(f"{doc.id} => {doc.to_dict()}")
-  # return docs
+  # for doc in docs:
+  #     print(f"{doc.id} => {doc.to_dict()}")
+
+  return docs
 
 def main():
+  query_list = [{'field': 'year', 'operator': '>', 'value': '1990'}, {'field': 'director', 'operator': '==', 'value': 'Christopher Nolan'}]
   # addDocument('movies.json')
-  getData()
+  movies = getData(query_list)
+  for movie in movies:
+     print(f"{movie.id} => {movie.to_dict()}")
 
 main()

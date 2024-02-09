@@ -104,11 +104,11 @@ def getData(query_list):
 
   return docs
 
-def main():
-  query_list = [{'field': 'year', 'operator': '>', 'value': '1990'}, {'field': 'director', 'operator': '==', 'value': 'Christopher Nolan'}]
-  # addDocument('movies.json')
-  movies = getData(query_list)
-  for movie in movies:
-     print(f"{movie.id} => {movie.to_dict()}")
+# def main():
+#   query_list = [{'field': 'year', 'operator': '>', 'value': '1990'}, {'field': 'director', 'operator': '==', 'value': 'Christopher Nolan'}]
+#   # addDocument('movies.json')
+#   movies = getData(query_list)
+#   for movie in movies:
+#      print(f"{movie.id} => {movie.to_dict()}")
 
-main()
+# main()

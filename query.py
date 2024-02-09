@@ -132,16 +132,19 @@ def query_engine():
             # Receive a list of movie objects that fit the query,
             # print the title and year of each item
             for doc in docs:
+                # By default, print the title
                 print_string = f"{doc.id}, "
                 
-                
-                
+                # If user selected fields with WHERE clause...
                 if selected_fields != -1:
+                    # See if title is requested, don't force it if it was
                     if 'title' in selected_fields:
                         print_string = ''
                         
+                    # Go through the fields requested in order of request
                     for field in selected_fields:
                         print_string += f"{doc.to_dict()[field]}, "
+                # Print out the requested information
                 print(print_string)
             
             

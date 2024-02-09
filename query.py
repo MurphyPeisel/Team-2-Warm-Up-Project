@@ -34,8 +34,8 @@ def parse_input(in_string):
         return ERROR
     
     if in_string.count(SELECTOR) == 1:
+        # allow user to select which fields to return
         selected_fields_string, in_string = in_string.split(SELECTOR)
-        
         selected_fields = shlex.split(selected_fields_string)
         for field in selected_fields:
             if field not in FIELDS:

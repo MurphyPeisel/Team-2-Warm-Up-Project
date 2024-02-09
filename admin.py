@@ -1,4 +1,5 @@
 import os.path
+import firebaseAuth
 
 #Get json file name from user with validation
 valid = False
@@ -9,8 +10,8 @@ while not valid:
         if os.path.isfile(fileName):         
             valid = True
             #Delete all data that may exist in firestore
-
             #Load data(JSON) Fills our firestore database
+            firebaseAuth.addDocument(fileName)
         else:
             print("That file was not found, please try again...")
     else: 

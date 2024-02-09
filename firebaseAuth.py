@@ -3,7 +3,6 @@ from google.cloud.firestore import FieldFilter
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
-import json
 
 class Movie:
     def __init__(self, title, year, certificate, runtime, genre, imdb_rating, meta_score,
@@ -61,28 +60,6 @@ cred = credentials.Certificate("team-2-key.json")
 app = firebase_admin.initialize_app(cred)
 
 db = firestore.client()
-
-# this is the function for adding the json file to our collection
-def addDocument(json_file):
-  with open(json_file, 'r') as file:
-    json_data = json.load(file)
-    movies_ref = db.collection("movies")
-    for movie in json_data:
-      movies_ref.document(movie['title']).set(
-        Movie(
-           movie['title'],
-           movie['year'],
-           movie['certificate'],
-           movie['runtime'],
-           movie['genre'],
-           movie['imdb_rating'],
-           movie['meta_score'],
-           movie['director'],
-           [movie['star1'], movie['star2'], movie['star3'], movie['star4']],
-           movie['num_votes'],
-           movie['gross']
-        ).to_dict()
-      )
 
 def getData(query_list):
   movies_ref = db.collection("movies")

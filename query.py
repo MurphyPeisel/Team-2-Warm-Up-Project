@@ -23,10 +23,24 @@ def parse_input(in_string):
     # queries are held in a list of dictionaries where each dictionary is a query with keys field, operator, value
     NUM_PARTS = 3 # number of parts in a query (field, operator, value)
     COMPOUND = " AND " # compound operator
+    SELECTOR = " WHERE "
     ERROR = -1
 
-    num_comparisons = in_string.count(COMPOUND) + 1 # always 1 more comparison than compound operators
-    query_list = in_string.split(" AND ")
+    selected_fields = -1
+    if in_string.count(SELECTOR) > 1:
+        print("ERROR -- More than one selector, please only use keyword WHERE once")
+        return ERROR
+    
+    if in_string.count(SELECTOR) == 1:
+        selected_fields_string, in_string = in_string.split(SELECTOR)
+        
+        selected_fields = shlex.split(selected_fields_string)
+        for field in selected_fields:
+            if field not in FIELDS:
+                print("ERROR -- Selected non-field before WHERE clause")
+                return ERROR
+    
+    query_list = in_string.split(COMPOUND)
     parsed_query = []
     query_dict = {}
     for query in query_list:
@@ -46,7 +60,7 @@ def parse_input(in_string):
         query_dict = {"field": query_field, "operator": query_operator, "value": query_value}
         # add to parsed query
         parsed_query.append(query_dict)
-    return parsed_query
+    return selected_fields, parsed_query
     
 # For testing the parser
 
@@ -98,7 +112,7 @@ def query_engine():
         if user_input in EXIT_LIST:
             return
         
-        parsed_query = parse_input(user_input)
+        selected_fields, parsed_query = parse_input(user_input)
         
         # Proceed with querying database if the query is valid
         if parsed_query != -1:
@@ -109,14 +123,20 @@ def query_engine():
             
             # Sequential items in the parsed_query are to be intersected
             # This intersection will occur in the getData function
-            docs = firebaseAuth.getData(parsed_query)
-            
-            for doc in docs:
-                print(f"{doc.id}, {doc.to_dict()}")
             # Call a function to query the database with the values stored
             # in the parsed query
+            
+            # Once select is implemented, 
+            docs = firebaseAuth.getData(parsed_query)
+            
             # Receive a list of movie objects that fit the query,
             # print the title and year of each item
+            for doc in docs:
+                print_string = f"{doc.id}, "
+                if selected_fields != -1:
+                    for field in selected_fields:
+                        print_string += f"{doc.to_dict()[field]}, "
+                print(print_string)
             
             
             

@@ -69,9 +69,9 @@ def parse_input(in_string):
 # # sample loop. makes sure parsed_query is in right format, running until it is
 # while parsed_query == -1:
 #     user_input = get_input()
-#     parsed_query = parse_input(user_input)
+#     selected_fields, parsed_query = parse_input(user_input)
     
-# print(parsed_query)
+# print(selected_fields, parsed_query)
 
 #TODO: every query is a list, even non-compound queries. to evaluate, make sure to do "for x in parsed_query" and evaluate all parts
 

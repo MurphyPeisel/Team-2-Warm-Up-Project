@@ -48,19 +48,19 @@ def parse_input(in_string):
         parsed_query.append(query_dict)
     return parsed_query
     
-user_input = get_input()
-parsed_query = parse_input(user_input)
-# sample loop. makes sure parsed_query is in right format, running until it is
-while parsed_query == -1:
-    user_input = get_input()
-    parsed_query = parse_input(user_input)
+# For testing the parser
+
+# user_input = get_input()
+# parsed_query = parse_input(user_input)
+# # sample loop. makes sure parsed_query is in right format, running until it is
+# while parsed_query == -1:
+#     user_input = get_input()
+#     parsed_query = parse_input(user_input)
     
-print(parsed_query)
+# print(parsed_query)
 
 #TODO: every query is a list, even non-compound queries. to evaluate, make sure to do "for x in parsed_query" and evaluate all parts
 
-
-#%%
 import firebaseAuth
 
 # Terms that will bring up the help output
@@ -73,7 +73,9 @@ def get_help():
     """
     
     print(""""
-    You've accessed the help screen
+    You've accessed the help screen [By entering "help" or "?"]
+    
+    
     
     Enter exit, stop, logout, quit, signout to stop the program
     """)
@@ -81,6 +83,9 @@ def get_help():
 
 # Query Engine: 
 def query_engine():
+    """
+    Loops to allow user input that will be used to query the database
+    """
     while True:
         user_input = get_input()
         
@@ -95,12 +100,26 @@ def query_engine():
         
         parsed_query = parse_input(user_input)
         
-        # make sure parsed_query is in right format, running until it is
+        # Proceed with querying database if the query is valid
         if parsed_query != -1:
-            # Proceed with querying database, otherwise start over
-            print(parsed_query)
             
-            # Call upon firebaseAuth function with the parsed query
+            # At this point, parsed_query will be a list of dictionaries,
+            # each with the following keys:
+                # field, operator, and value
+            
+            # Sequential items in the parsed_query are to be intersected
+            # This intersection will occur either here or in the statement to
+            # the database
+            docs = firebaseAuth.getData(parsed_query)
+            
+            for doc in docs:
+                print(f"{doc.id} => {doc.to_dict()}")
+            # Call a function to query the database with the values stored
+            # in the parsed query
+            # Receive a list of movie objects that fit the query,
+            # print the title and year of each item
+            
+            pass
             
             
         

@@ -24,7 +24,7 @@ def parse_input(in_string):
     NUM_PARTS = 3 # number of parts in a query (field, operator, value)
     COMPOUND = " AND " # compound operator
     SELECTOR = " WHERE "
-    ERROR = -1
+    ERROR = (-1, -1)
 
     selected_fields = -1
     if in_string.count(SELECTOR) > 1:
@@ -133,7 +133,13 @@ def query_engine():
             # print the title and year of each item
             for doc in docs:
                 print_string = f"{doc.id}, "
+                
+                
+                
                 if selected_fields != -1:
+                    if 'title' in selected_fields:
+                        print_string = ''
+                        
                     for field in selected_fields:
                         print_string += f"{doc.to_dict()[field]}, "
                 print(print_string)

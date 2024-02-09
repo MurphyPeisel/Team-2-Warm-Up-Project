@@ -69,11 +69,11 @@ def getData(query_list):
     operator = query_info['operator']
     value = query_info['value']
     
-    if operator == '<':
-        query = query.where(filter=FieldFilter(field, '<', value))
-    elif operator == '==':
-        query = query.where(filter=FieldFilter(field, '==', value))
-        
+    # if operator == '<':
+    #     query = query.where(filter=FieldFilter(field, '<', value))
+    # elif operator == '==':
+    #     query = query.where(filter=FieldFilter(field, '==', value))
+    query = query.where(filter=FieldFilter(field, operator, value))
   docs = (query.stream())
 
   # for doc in docs:

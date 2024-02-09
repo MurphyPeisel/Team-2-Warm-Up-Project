@@ -25,7 +25,6 @@ def addDocument(json_file):
         firebaseAuth.Movie(
            movie['title'],
            movie['year'],
-           movie['certificate'],
            movie['runtime'],
            movie['genre'],
            movie['imdb_rating'],

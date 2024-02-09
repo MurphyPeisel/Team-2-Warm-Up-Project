@@ -48,19 +48,19 @@ def parse_input(in_string):
         parsed_query.append(query_dict)
     return parsed_query
     
-user_input = get_input()
-parsed_query = parse_input(user_input)
-# sample loop. makes sure parsed_query is in right format, running until it is
-while parsed_query == -1:
-    user_input = get_input()
-    parsed_query = parse_input(user_input)
+# For testing the parser
+
+# user_input = get_input()
+# parsed_query = parse_input(user_input)
+# # sample loop. makes sure parsed_query is in right format, running until it is
+# while parsed_query == -1:
+#     user_input = get_input()
+#     parsed_query = parse_input(user_input)
     
-print(parsed_query)
+# print(parsed_query)
 
 #TODO: every query is a list, even non-compound queries. to evaluate, make sure to do "for x in parsed_query" and evaluate all parts
 
-
-#%%
 import firebaseAuth
 
 # Terms that will bring up the help output
@@ -73,7 +73,9 @@ def get_help():
     """
     
     print(""""
-    You've accessed the help screen
+    You've accessed the help screen [By entering "help" or "?"]
+    
+    
     
     Enter exit, stop, logout, quit, signout to stop the program
     """)

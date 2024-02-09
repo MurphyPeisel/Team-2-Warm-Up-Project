@@ -1,9 +1,9 @@
 [
   {
+    "": 0,
     "title": "The Shawshank Redemption",
     "year": 1994,
-    "certificate": "A",
-    "runtime": "142 min",
+    "runtime": 142,
     "genre": "Drama",
     "imdb_rating": 9.3,
     "meta_score": 80,
@@ -13,13 +13,13 @@
     "star3": "Bob Gunton",
     "star4": "William Sadler",
     "num_votes": 2343110,
-    "gross": "28,341,469"
+    "gross": 28341469
   },
   {
+    "": 1,
     "title": "The Godfather",
     "year": 1972,
-    "certificate": "A",
-    "runtime": "175 min",
+    "runtime": 175,
     "genre": "Crime, Drama",
     "imdb_rating": 9.2,
     "meta_score": 100,
@@ -29,13 +29,13 @@
     "star3": "James Caan",
     "star4": "Diane Keaton",
     "num_votes": 1620367,
-    "gross": "134,966,411"
+    "gross": 134966411
   },
   {
+    "": 2,
     "title": "The Dark Knight",
     "year": 2008,
-    "certificate": "UA",
-    "runtime": "152 min",
+    "runtime": 152,
     "genre": "Action, Crime, Drama",
     "imdb_rating": 9,
     "meta_score": 84,
@@ -45,13 +45,13 @@
     "star3": "Aaron Eckhart",
     "star4": "Michael Caine",
     "num_votes": 2303232,
-    "gross": "534,858,444"
+    "gross": 534858444
   },
   {
+    "": 3,
     "title": "The Godfather: Part II",
     "year": 1974,
-    "certificate": "A",
-    "runtime": "202 min",
+    "runtime": 202,
     "genre": "Crime, Drama",
     "imdb_rating": 9,
     "meta_score": 90,
@@ -61,13 +61,13 @@
     "star3": "Robert Duvall",
     "star4": "Diane Keaton",
     "num_votes": 1129952,
-    "gross": "57,300,000"
+    "gross": 57300000
   },
   {
+    "": 4,
     "title": "12 Angry Men",
     "year": 1957,
-    "certificate": "U",
-    "runtime": "96 min",
+    "runtime": 96,
     "genre": "Crime, Drama",
     "imdb_rating": 9,
     "meta_score": 96,
@@ -77,13 +77,13 @@
     "star3": "Martin Balsam",
     "star4": "John Fiedler",
     "num_votes": 689845,
-    "gross": "4,360,000"
+    "gross": 4360000
   },
   {
+    "": 5,
     "title": "The Lord of the Rings: The Return of the King",
     "year": 2003,
-    "certificate": "U",
-    "runtime": "201 min",
+    "runtime": 201,
     "genre": "Action, Adventure, Drama",
     "imdb_rating": 8.9,
     "meta_score": 94,
@@ -93,13 +93,13 @@
     "star3": "Ian McKellen",
     "star4": "Orlando Bloom",
     "num_votes": 1642758,
-    "gross": "377,845,905"
+    "gross": 377845905
   },
   {
+    "": 6,
     "title": "Pulp Fiction",
     "year": 1994,
-    "certificate": "A",
-    "runtime": "154 min",
+    "runtime": 154,
     "genre": "Crime, Drama",
     "imdb_rating": 8.9,
     "meta_score": 94,
@@ -109,13 +109,13 @@
     "star3": "Samuel L. Jackson",
     "star4": "Bruce Willis",
     "num_votes": 1826188,
-    "gross": "107,928,762"
+    "gross": 107928762
   },
   {
+    "": 7,
     "title": "Schindler's List",
     "year": 1993,
-    "certificate": "A",
-    "runtime": "195 min",
+    "runtime": 195,
     "genre": "Biography, Drama, History",
     "imdb_rating": 8.9,
     "meta_score": 94,
@@ -125,13 +125,13 @@
     "star3": "Ben Kingsley",
     "star4": "Caroline Goodall",
     "num_votes": 1213505,
-    "gross": "96,898,818"
+    "gross": 96898818
   },
   {
+    "": 8,
     "title": "Inception",
     "year": 2010,
-    "certificate": "UA",
-    "runtime": "148 min",
+    "runtime": 148,
     "genre": "Action, Adventure, Sci-Fi",
     "imdb_rating": 8.8,
     "meta_score": 74,
@@ -141,13 +141,13 @@
     "star3": "Elliot Page",
     "star4": "Ken Watanabe",
     "num_votes": 2067042,
-    "gross": "292,576,195"
+    "gross": 292576195
   },
   {
+    "": 9,
     "title": "Fight Club",
     "year": 1999,
-    "certificate": "A",
-    "runtime": "139 min",
+    "runtime": 139,
     "genre": "Drama",
     "imdb_rating": 8.8,
     "meta_score": 66,
@@ -157,13 +157,13 @@
     "star3": "Meat Loaf",
     "star4": "Zach Grenier",
     "num_votes": 1854740,
-    "gross": "37,030,102"
+    "gross": 37030102
   },
   {
+    "": 10,
     "title": "The Lord of the Rings: The Fellowship of the Ring",
     "year": 2001,
-    "certificate": "U",
-    "runtime": "178 min",
+    "runtime": 178,
     "genre": "Action, Adventure, Drama",
     "imdb_rating": 8.8,
     "meta_score": 92,
@@ -173,13 +173,13 @@
     "star3": "Orlando Bloom",
     "star4": "Sean Bean",
     "num_votes": 1661481,
-    "gross": "315,544,750"
+    "gross": 315544750
   },
   {
+    "": 11,
     "title": "Forrest Gump",
     "year": 1994,
-    "certificate": "UA",
-    "runtime": "142 min",
+    "runtime": 142,
     "genre": "Drama, Romance",
     "imdb_rating": 8.8,
     "meta_score": 82,
@@ -189,13 +189,13 @@
     "star3": "Gary Sinise",
     "star4": "Sally Field",
     "num_votes": 1809221,
-    "gross": "330,252,182"
+    "gross": 330252182
   },
   {
+    "": 12,
     "title": "Il buono, il brutto, il cattivo",
     "year": 1966,
-    "certificate": "A",
-    "runtime": "161 min",
+    "runtime": 161,
     "genre": "Western",
     "imdb_rating": 8.8,
     "meta_score": 90,
@@ -205,13 +205,13 @@
     "star3": "Lee Van Cleef",
     "star4": "Aldo Giuffre",
     "num_votes": 688390,
-    "gross": "6,100,000"
+    "gross": 6100000
   },
   {
+    "": 13,
     "title": "The Lord of the Rings: The Two Towers",
     "year": 2002,
-    "certificate": "UA",
-    "runtime": "179 min",
+    "runtime": 179,
     "genre": "Action, Adventure, Drama",
     "imdb_rating": 8.7,
     "meta_score": 87,
@@ -221,13 +221,13 @@
     "star3": "Viggo Mortensen",
     "star4": "Orlando Bloom",
     "num_votes": 1485555,
-    "gross": "342,551,365"
+    "gross": 342551365
   },
   {
+    "": 14,
     "title": "The Matrix",
     "year": 1999,
-    "certificate": "A",
-    "runtime": "136 min",
+    "runtime": 136,
     "genre": "Action, Sci-Fi",
     "imdb_rating": 8.7,
     "meta_score": 73,
@@ -237,13 +237,13 @@
     "star3": "Laurence Fishburne",
     "star4": "Carrie-Anne Moss",
     "num_votes": 1676426,
-    "gross": "171,479,930"
+    "gross": 171479930
   },
   {
+    "": 15,
     "title": "Goodfellas",
     "year": 1990,
-    "certificate": "A",
-    "runtime": "146 min",
+    "runtime": 146,
     "genre": "Biography, Crime, Drama",
     "imdb_rating": 8.7,
     "meta_score": 90,
@@ -253,13 +253,13 @@
     "star3": "Joe Pesci",
     "star4": "Lorraine Bracco",
     "num_votes": 1020727,
-    "gross": "46,836,394"
+    "gross": 46836394
   },
   {
+    "": 16,
     "title": "Star Wars: Episode V - The Empire Strikes Back",
     "year": 1980,
-    "certificate": "UA",
-    "runtime": "124 min",
+    "runtime": 124,
     "genre": "Action, Adventure, Fantasy",
     "imdb_rating": 8.7,
     "meta_score": 82,
@@ -269,13 +269,13 @@
     "star3": "Carrie Fisher",
     "star4": "Billy Dee Williams",
     "num_votes": 1159315,
-    "gross": "290,475,067"
+    "gross": 290475067
   },
   {
+    "": 17,
     "title": "One Flew Over the Cuckoo's Nest",
     "year": 1975,
-    "certificate": "A",
-    "runtime": "133 min",
+    "runtime": 133,
     "genre": "Drama",
     "imdb_rating": 8.7,
     "meta_score": 83,
@@ -285,13 +285,13 @@
     "star3": "Michael Berryman",
     "star4": "Peter Brocco",
     "num_votes": 918088,
-    "gross": "112,000,000"
+    "gross": 112000000
   },
   {
+    "": 18,
     "title": "Hamilton",
     "year": 2020,
-    "certificate": "PG-13",
-    "runtime": "160 min",
+    "runtime": 160,
     "genre": "Biography, Drama, History",
     "imdb_rating": 8.6,
     "meta_score": 90,
@@ -304,10 +304,10 @@
     "gross": ""
   },
   {
+    "": 19,
     "title": "Gisaengchung",
     "year": 2019,
-    "certificate": "A",
-    "runtime": "132 min",
+    "runtime": 132,
     "genre": "Comedy, Drama, Thriller",
     "imdb_rating": 8.6,
     "meta_score": 96,
@@ -317,13 +317,13 @@
     "star3": "Cho Yeo-jeong",
     "star4": "Choi Woo-sik",
     "num_votes": 552778,
-    "gross": "53,367,844"
+    "gross": 53367844
   },
   {
+    "": 20,
     "title": "Soorarai Pottru",
     "year": 2020,
-    "certificate": "U",
-    "runtime": "153 min",
+    "runtime": 153,
     "genre": "Drama",
     "imdb_rating": 8.6,
     "meta_score": "",
@@ -336,10 +336,10 @@
     "gross": ""
   },
   {
+    "": 21,
     "title": "Interstellar",
     "year": 2014,
-    "certificate": "UA",
-    "runtime": "169 min",
+    "runtime": 169,
     "genre": "Adventure, Drama, Sci-Fi",
     "imdb_rating": 8.6,
     "meta_score": 74,
@@ -349,13 +349,13 @@
     "star3": "Jessica Chastain",
     "star4": "Mackenzie Foy",
     "num_votes": 1512360,
-    "gross": "188,020,017"
+    "gross": 188020017
   },
   {
+    "": 22,
     "title": "Cidade de Deus",
     "year": 2002,
-    "certificate": "A",
-    "runtime": "130 min",
+    "runtime": 130,
     "genre": "Crime, Drama",
     "imdb_rating": 8.6,
     "meta_score": 79,
@@ -365,13 +365,13 @@
     "star3": "Leandro Firmino",
     "star4": "Matheus Nachtergaele",
     "num_votes": 699256,
-    "gross": "7,563,397"
+    "gross": 7563397
   },
   {
+    "": 23,
     "title": "Sen to Chihiro no kamikakushi",
     "year": 2001,
-    "certificate": "U",
-    "runtime": "125 min",
+    "runtime": 125,
     "genre": "Animation, Adventure, Family",
     "imdb_rating": 8.6,
     "meta_score": 96,
@@ -381,13 +381,13 @@
     "star3": "Miyu Irino",
     "star4": "Rumi Hiiragi",
     "num_votes": 651376,
-    "gross": "10,055,859"
+    "gross": 10055859
   },
   {
+    "": 24,
     "title": "Saving Private Ryan",
     "year": 1998,
-    "certificate": "R",
-    "runtime": "169 min",
+    "runtime": 169,
     "genre": "Drama, War",
     "imdb_rating": 8.6,
     "meta_score": 91,
@@ -397,13 +397,13 @@
     "star3": "Tom Sizemore",
     "star4": "Edward Burns",
     "num_votes": 1235804,
-    "gross": "216,540,909"
+    "gross": 216540909
   },
   {
+    "": 25,
     "title": "The Green Mile",
     "year": 1999,
-    "certificate": "A",
-    "runtime": "189 min",
+    "runtime": 189,
     "genre": "Crime, Drama, Fantasy",
     "imdb_rating": 8.6,
     "meta_score": 61,
@@ -413,13 +413,13 @@
     "star3": "David Morse",
     "star4": "Bonnie Hunt",
     "num_votes": 1147794,
-    "gross": "136,801,374"
+    "gross": 136801374
   },
   {
+    "": 26,
     "title": "La vita e bella",
     "year": 1997,
-    "certificate": "U",
-    "runtime": "116 min",
+    "runtime": 116,
     "genre": "Comedy, Drama, Romance",
     "imdb_rating": 8.6,
     "meta_score": 59,
@@ -429,13 +429,13 @@
     "star3": "Giorgio Cantarini",
     "star4": "Giustino Durano",
     "num_votes": 623629,
-    "gross": "57,598,247"
+    "gross": 57598247
   },
   {
+    "": 27,
     "title": "Se7en",
     "year": 1995,
-    "certificate": "A",
-    "runtime": "127 min",
+    "runtime": 127,
     "genre": "Crime, Drama, Mystery",
     "imdb_rating": 8.6,
     "meta_score": 65,
@@ -445,13 +445,13 @@
     "star3": "Kevin Spacey",
     "star4": "Andrew Kevin Walker",
     "num_votes": 1445096,
-    "gross": "100,125,643"
+    "gross": 100125643
   },
   {
+    "": 28,
     "title": "The Silence of the Lambs",
     "year": 1991,
-    "certificate": "A",
-    "runtime": "118 min",
+    "runtime": 118,
     "genre": "Crime, Drama, Thriller",
     "imdb_rating": 8.6,
     "meta_score": 85,
@@ -461,13 +461,13 @@
     "star3": "Lawrence A. Bonney",
     "star4": "Kasi Lemmons",
     "num_votes": 1270197,
-    "gross": "130,742,922"
+    "gross": 130742922
   },
   {
+    "": 29,
     "title": "Star Wars",
     "year": 1977,
-    "certificate": "UA",
-    "runtime": "121 min",
+    "runtime": 121,
     "genre": "Action, Adventure, Fantasy",
     "imdb_rating": 8.6,
     "meta_score": 90,
@@ -477,13 +477,13 @@
     "star3": "Carrie Fisher",
     "star4": "Alec Guinness",
     "num_votes": 1231473,
-    "gross": "322,740,140"
+    "gross": 322740140
   },
   {
+    "": 30,
     "title": "Seppuku",
     "year": 1962,
-    "certificate": "",
-    "runtime": "133 min",
+    "runtime": 133,
     "genre": "Action, Drama, Mystery",
     "imdb_rating": 8.6,
     "meta_score": 85,
@@ -496,10 +496,10 @@
     "gross": ""
   },
   {
+    "": 31,
     "title": "Shichinin no samurai",
     "year": 1954,
-    "certificate": "U",
-    "runtime": "207 min",
+    "runtime": 207,
     "genre": "Action, Adventure, Drama",
     "imdb_rating": 8.6,
     "meta_score": 98,
@@ -509,13 +509,13 @@
     "star3": "Keiko Tsushima",
     "star4": "Yukiko Shimazaki",
     "num_votes": 315744,
-    "gross": "269,061"
+    "gross": 269061
   },
   {
+    "": 32,
     "title": "It's a Wonderful Life",
     "year": 1946,
-    "certificate": "PG",
-    "runtime": "130 min",
+    "runtime": 130,
     "genre": "Drama, Family, Fantasy",
     "imdb_rating": 8.6,
     "meta_score": 89,
@@ -528,10 +528,10 @@
     "gross": ""
   },
   {
+    "": 33,
     "title": "Joker",
     "year": 2019,
-    "certificate": "A",
-    "runtime": "122 min",
+    "runtime": 122,
     "genre": "Crime, Drama, Thriller",
     "imdb_rating": 8.5,
     "meta_score": 59,
@@ -541,13 +541,13 @@
     "star3": "Zazie Beetz",
     "star4": "Frances Conroy",
     "num_votes": 939252,
-    "gross": "335,451,311"
+    "gross": 335451311
   },
   {
+    "": 34,
     "title": "Whiplash",
     "year": 2014,
-    "certificate": "A",
-    "runtime": "106 min",
+    "runtime": 106,
     "genre": "Drama, Music",
     "imdb_rating": 8.5,
     "meta_score": 88,
@@ -557,13 +557,13 @@
     "star3": "Melissa Benoist",
     "star4": "Paul Reiser",
     "num_votes": 717585,
-    "gross": "13,092,000"
+    "gross": 13092000
   },
   {
+    "": 35,
     "title": "The Intouchables",
     "year": 2011,
-    "certificate": "UA",
-    "runtime": "112 min",
+    "runtime": 112,
     "genre": "Biography, Comedy, Drama",
     "imdb_rating": 8.5,
     "meta_score": 57,
@@ -573,13 +573,13 @@
     "star3": "Omar Sy",
     "star4": "Anne Le Ny",
     "num_votes": 760360,
-    "gross": "13,182,281"
+    "gross": 13182281
   },
   {
+    "": 36,
     "title": "The Prestige",
     "year": 2006,
-    "certificate": "U",
-    "runtime": "130 min",
+    "runtime": 130,
     "genre": "Drama, Mystery, Sci-Fi",
     "imdb_rating": 8.5,
     "meta_score": 66,
@@ -589,13 +589,13 @@
     "star3": "Scarlett Johansson",
     "star4": "Michael Caine",
     "num_votes": 1190259,
-    "gross": "53,089,891"
+    "gross": 53089891
   },
   {
+    "": 37,
     "title": "The Departed",
     "year": 2006,
-    "certificate": "A",
-    "runtime": "151 min",
+    "runtime": 151,
     "genre": "Crime, Drama, Thriller",
     "imdb_rating": 8.5,
     "meta_score": 85,
@@ -605,13 +605,13 @@
     "star3": "Jack Nicholson",
     "star4": "Mark Wahlberg",
     "num_votes": 1189773,
-    "gross": "132,384,315"
+    "gross": 132384315
   },
   {
+    "": 38,
     "title": "The Pianist",
     "year": 2002,
-    "certificate": "R",
-    "runtime": "150 min",
+    "runtime": 150,
     "genre": "Biography, Drama, Music",
     "imdb_rating": 8.5,
     "meta_score": 85,
@@ -621,13 +621,13 @@
     "star3": "Frank Finlay",
     "star4": "Emilia Fox",
     "num_votes": 729603,
-    "gross": "32,572,577"
+    "gross": 32572577
   },
   {
+    "": 39,
     "title": "Gladiator",
     "year": 2000,
-    "certificate": "UA",
-    "runtime": "155 min",
+    "runtime": 155,
     "genre": "Action, Adventure, Drama",
     "imdb_rating": 8.5,
     "meta_score": 67,
@@ -637,13 +637,13 @@
     "star3": "Connie Nielsen",
     "star4": "Oliver Reed",
     "num_votes": 1341460,
-    "gross": "187,705,427"
+    "gross": 187705427
   },
   {
+    "": 40,
     "title": "American History X",
     "year": 1998,
-    "certificate": "R",
-    "runtime": "119 min",
+    "runtime": 119,
     "genre": "Drama",
     "imdb_rating": 8.5,
     "meta_score": 62,
@@ -653,13 +653,13 @@
     "star3": "Beverly D'Angelo",
     "star4": "Jennifer Lien",
     "num_votes": 1034705,
-    "gross": "6,719,864"
+    "gross": 6719864
   },
   {
+    "": 41,
     "title": "The Usual Suspects",
     "year": 1995,
-    "certificate": "A",
-    "runtime": "106 min",
+    "runtime": 106,
     "genre": "Crime, Mystery, Thriller",
     "imdb_rating": 8.5,
     "meta_score": 77,
@@ -669,13 +669,13 @@
     "star3": "Chazz Palminteri",
     "star4": "Stephen Baldwin",
     "num_votes": 991208,
-    "gross": "23,341,568"
+    "gross": 23341568
   },
   {
+    "": 42,
     "title": "Leon",
     "year": 1994,
-    "certificate": "A",
-    "runtime": "110 min",
+    "runtime": 110,
     "genre": "Action, Crime, Drama",
     "imdb_rating": 8.5,
     "meta_score": 64,
@@ -685,13 +685,13 @@
     "star3": "Natalie Portman",
     "star4": "Danny Aiello",
     "num_votes": 1035236,
-    "gross": "19,501,238"
+    "gross": 19501238
   },
   {
+    "": 43,
     "title": "The Lion King",
     "year": 1994,
-    "certificate": "U",
-    "runtime": "88 min",
+    "runtime": 88,
     "genre": "Animation, Adventure, Drama",
     "imdb_rating": 8.5,
     "meta_score": 88,
@@ -701,13 +701,13 @@
     "star3": "Jeremy Irons",
     "star4": "James Earl Jones",
     "num_votes": 942045,
-    "gross": "422,783,777"
+    "gross": 422783777
   },
   {
+    "": 44,
     "title": "Terminator 2: Judgment Day",
     "year": 1991,
-    "certificate": "U",
-    "runtime": "137 min",
+    "runtime": 137,
     "genre": "Action, Sci-Fi",
     "imdb_rating": 8.5,
     "meta_score": 75,
@@ -717,13 +717,13 @@
     "star3": "Edward Furlong",
     "star4": "Robert Patrick",
     "num_votes": 995506,
-    "gross": "204,843,350"
+    "gross": 204843350
   },
   {
+    "": 45,
     "title": "Nuovo Cinema Paradiso",
     "year": 1988,
-    "certificate": "U",
-    "runtime": "155 min",
+    "runtime": 155,
     "genre": "Drama, Romance",
     "imdb_rating": 8.5,
     "meta_score": 80,
@@ -733,13 +733,13 @@
     "star3": "Antonella Attili",
     "star4": "Isa Danieli",
     "num_votes": 230763,
-    "gross": "11,990,401"
+    "gross": 11990401
   },
   {
+    "": 46,
     "title": "Hotaru no haka",
     "year": 1988,
-    "certificate": "U",
-    "runtime": "89 min",
+    "runtime": 89,
     "genre": "Animation, Drama, War",
     "imdb_rating": 8.5,
     "meta_score": 94,
@@ -752,10 +752,10 @@
     "gross": ""
   },
   {
+    "": 47,
     "title": "Back to the Future",
     "year": 1985,
-    "certificate": "U",
-    "runtime": "116 min",
+    "runtime": 116,
     "genre": "Adventure, Comedy, Sci-Fi",
     "imdb_rating": 8.5,
     "meta_score": 87,
@@ -765,13 +765,13 @@
     "star3": "Lea Thompson",
     "star4": "Crispin Glover",
     "num_votes": 1058081,
-    "gross": "210,609,762"
+    "gross": 210609762
   },
   {
+    "": 48,
     "title": "Once Upon a Time in the West",
     "year": 1968,
-    "certificate": "U",
-    "runtime": "165 min",
+    "runtime": 165,
     "genre": "Western",
     "imdb_rating": 8.5,
     "meta_score": 80,
@@ -781,6 +781,6 @@
     "star3": "Claudia Cardinale",
     "star4": "Jason Robards",
     "num_votes": 302844,
-    "gross": "5,321,508"
+    "gross": 5321508
   }
 ]

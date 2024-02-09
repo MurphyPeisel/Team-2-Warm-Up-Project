@@ -4,7 +4,20 @@ import firebaseAuth
         
 # this is the function for adding the json file to our collection
 def addDocument(json_file):
-  with open(json_file, 'r') as file:
+   '''
+   Takes in json_file name, adds content to database
+   
+   Parameters
+   ----------
+   json_file : str
+      Filename of json file to be loaded into the database.
+
+   Returns
+   -------
+   None.
+   '''
+    
+   with open(json_file, 'r') as file:
     json_data = json.load(file)
     movies_ref = firebaseAuth.db.collection("movies")
     for movie in json_data:
@@ -12,7 +25,6 @@ def addDocument(json_file):
         firebaseAuth.Movie(
            movie['title'],
            movie['year'],
-           movie['certificate'],
            movie['runtime'],
            movie['genre'],
            movie['imdb_rating'],

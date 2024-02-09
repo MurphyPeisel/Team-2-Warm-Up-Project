@@ -1,0 +1,50 @@
+title,year,runtime,genre,imdb_rating,meta_score,director,star1,star2,star3,star4,num_votes,gross
+The Shawshank Redemption,1994,142,Drama,9.3,80.0,Frank Darabont,Tim Robbins,Morgan Freeman,Bob Gunton,William Sadler,2343110,28341469
+The Godfather,1972,175,"Crime, Drama",9.2,100.0,Francis Ford Coppola,Marlon Brando,Al Pacino,James Caan,Diane Keaton,1620367,134966411
+The Dark Knight,2008,152,"Action, Crime, Drama",9.0,84.0,Christopher Nolan,Christian Bale,Heath Ledger,Aaron Eckhart,Michael Caine,2303232,534858444
+The Godfather: Part II,1974,202,"Crime, Drama",9.0,90.0,Francis Ford Coppola,Al Pacino,Robert De Niro,Robert Duvall,Diane Keaton,1129952,57300000
+12 Angry Men,1957,96,"Crime, Drama",9.0,96.0,Sidney Lumet,Henry Fonda,Lee J. Cobb,Martin Balsam,John Fiedler,689845,4360000
+The Lord of the Rings: The Return of the King,2003,201,"Action, Adventure, Drama",8.9,94.0,Peter Jackson,Elijah Wood,Viggo Mortensen,Ian McKellen,Orlando Bloom,1642758,377845905
+Pulp Fiction,1994,154,"Crime, Drama",8.9,94.0,Quentin Tarantino,John Travolta,Uma Thurman,Samuel L. Jackson,Bruce Willis,1826188,107928762
+Schindler's List,1993,195,"Biography, Drama, History",8.9,94.0,Steven Spielberg,Liam Neeson,Ralph Fiennes,Ben Kingsley,Caroline Goodall,1213505,96898818
+Inception,2010,148,"Action, Adventure, Sci-Fi",8.8,74.0,Christopher Nolan,Leonardo DiCaprio,Joseph Gordon-Levitt,Elliot Page,Ken Watanabe,2067042,292576195
+Fight Club,1999,139,Drama,8.8,66.0,David Fincher,Brad Pitt,Edward Norton,Meat Loaf,Zach Grenier,1854740,37030102
+The Lord of the Rings: The Fellowship of the Ring,2001,178,"Action, Adventure, Drama",8.8,92.0,Peter Jackson,Elijah Wood,Ian McKellen,Orlando Bloom,Sean Bean,1661481,315544750
+Forrest Gump,1994,142,"Drama, Romance",8.8,82.0,Robert Zemeckis,Tom Hanks,Robin Wright,Gary Sinise,Sally Field,1809221,330252182
+"Il buono, il brutto, il cattivo",1966,161,Western,8.8,90.0,Sergio Leone,Clint Eastwood,Eli Wallach,Lee Van Cleef,Aldo Giuffre,688390,6100000
+The Lord of the Rings: The Two Towers,2002,179,"Action, Adventure, Drama",8.7,87.0,Peter Jackson,Elijah Wood,Ian McKellen,Viggo Mortensen,Orlando Bloom,1485555,342551365
+The Matrix,1999,136,"Action, Sci-Fi",8.7,73.0,Lana Wachowski,Lilly Wachowski,Keanu Reeves,Laurence Fishburne,Carrie-Anne Moss,1676426,171479930
+Goodfellas,1990,146,"Biography, Crime, Drama",8.7,90.0,Martin Scorsese,Robert De Niro,Ray Liotta,Joe Pesci,Lorraine Bracco,1020727,46836394
+Star Wars: Episode V - The Empire Strikes Back,1980,124,"Action, Adventure, Fantasy",8.7,82.0,Irvin Kershner,Mark Hamill,Harrison Ford,Carrie Fisher,Billy Dee Williams,1159315,290475067
+One Flew Over the Cuckoo's Nest,1975,133,Drama,8.7,83.0,Milos Forman,Jack Nicholson,Louise Fletcher,Michael Berryman,Peter Brocco,918088,112000000
+Hamilton,2020,160,"Biography, Drama, History",8.6,90.0,Thomas Kail,Lin-Manuel Miranda,Phillipa Soo,Leslie Odom Jr.,Renee Elise Goldsberry,55291,
+Gisaengchung,2019,132,"Comedy, Drama, Thriller",8.6,96.0,Bong Joon Ho,Kang-ho Song,Lee Sun-kyun,Cho Yeo-jeong,Choi Woo-sik,552778,53367844
+Soorarai Pottru,2020,153,Drama,8.6,,Sudha Kongara,Suriya,Madhavan,Paresh Rawal,Aparna Balamurali,54995,
+Interstellar,2014,169,"Adventure, Drama, Sci-Fi",8.6,74.0,Christopher Nolan,Matthew McConaughey,Anne Hathaway,Jessica Chastain,Mackenzie Foy,1512360,188020017
+Cidade de Deus,2002,130,"Crime, Drama",8.6,79.0,Fernando Meirelles,Katia Lund,Alexandre Rodrigues,Leandro Firmino,Matheus Nachtergaele,699256,7563397
+Sen to Chihiro no kamikakushi,2001,125,"Animation, Adventure, Family",8.6,96.0,Hayao Miyazaki,Daveigh Chase,Suzanne Pleshette,Miyu Irino,Rumi Hiiragi,651376,10055859
+Saving Private Ryan,1998,169,"Drama, War",8.6,91.0,Steven Spielberg,Tom Hanks,Matt Damon,Tom Sizemore,Edward Burns,1235804,216540909
+The Green Mile,1999,189,"Crime, Drama, Fantasy",8.6,61.0,Frank Darabont,Tom Hanks,Michael Clarke Duncan,David Morse,Bonnie Hunt,1147794,136801374
+La vita e bella,1997,116,"Comedy, Drama, Romance",8.6,59.0,Roberto Benigni,Roberto Benigni,Nicoletta Braschi,Giorgio Cantarini,Giustino Durano,623629,57598247
+Se7en,1995,127,"Crime, Drama, Mystery",8.6,65.0,David Fincher,Morgan Freeman,Brad Pitt,Kevin Spacey,Andrew Kevin Walker,1445096,100125643
+The Silence of the Lambs,1991,118,"Crime, Drama, Thriller",8.6,85.0,Jonathan Demme,Jodie Foster,Anthony Hopkins,Lawrence A. Bonney,Kasi Lemmons,1270197,130742922
+Star Wars,1977,121,"Action, Adventure, Fantasy",8.6,90.0,George Lucas,Mark Hamill,Harrison Ford,Carrie Fisher,Alec Guinness,1231473,322740140
+Seppuku,1962,133,"Action, Drama, Mystery",8.6,85.0,Masaki Kobayashi,Tatsuya Nakadai,Akira Ishihama,Shima Iwashita,Tetsuro Tanba,42004,
+Shichinin no samurai,1954,207,"Action, Adventure, Drama",8.6,98.0,Akira Kurosawa,Toshiro Mifune,Takashi Shimura,Keiko Tsushima,Yukiko Shimazaki,315744,269061
+It's a Wonderful Life,1946,130,"Drama, Family, Fantasy",8.6,89.0,Frank Capra,James Stewart,Donna Reed,Lionel Barrymore,Thomas Mitchell,405801,
+Joker,2019,122,"Crime, Drama, Thriller",8.5,59.0,Todd Phillips,Joaquin Phoenix,Robert De Niro,Zazie Beetz,Frances Conroy,939252,335451311
+Whiplash,2014,106,"Drama, Music",8.5,88.0,Damien Chazelle,Miles Teller,J.K. Simmons,Melissa Benoist,Paul Reiser,717585,13092000
+The Intouchables,2011,112,"Biography, Comedy, Drama",8.5,57.0,Olivier Nakache,Eric Toledano,Francois Cluzet,Omar Sy,Anne Le Ny,760360,13182281
+The Prestige,2006,130,"Drama, Mystery, Sci-Fi",8.5,66.0,Christopher Nolan,Christian Bale,Hugh Jackman,Scarlett Johansson,Michael Caine,1190259,53089891
+The Departed,2006,151,"Crime, Drama, Thriller",8.5,85.0,Martin Scorsese,Leonardo DiCaprio,Matt Damon,Jack Nicholson,Mark Wahlberg,1189773,132384315
+The Pianist,2002,150,"Biography, Drama, Music",8.5,85.0,Roman Polanski,Adrien Brody,Thomas Kretschmann,Frank Finlay,Emilia Fox,729603,32572577
+Gladiator,2000,155,"Action, Adventure, Drama",8.5,67.0,Ridley Scott,Russell Crowe,Joaquin Phoenix,Connie Nielsen,Oliver Reed,1341460,187705427
+American History X,1998,119,Drama,8.5,62.0,Tony Kaye,Edward Norton,Edward Furlong,Beverly D'Angelo,Jennifer Lien,1034705,6719864
+The Usual Suspects,1995,106,"Crime, Mystery, Thriller",8.5,77.0,Bryan Singer,Kevin Spacey,Gabriel Byrne,Chazz Palminteri,Stephen Baldwin,991208,23341568
+Leon,1994,110,"Action, Crime, Drama",8.5,64.0,Luc Besson,Jean Reno,Gary Oldman,Natalie Portman,Danny Aiello,1035236,19501238
+The Lion King,1994,88,"Animation, Adventure, Drama",8.5,88.0,Roger Allers,Rob Minkoff,Matthew Broderick,Jeremy Irons,James Earl Jones,942045,422783777
+Terminator 2: Judgment Day,1991,137,"Action, Sci-Fi",8.5,75.0,James Cameron,Arnold Schwarzenegger,Linda Hamilton,Edward Furlong,Robert Patrick,995506,204843350
+Nuovo Cinema Paradiso,1988,155,"Drama, Romance",8.5,80.0,Giuseppe Tornatore,Philippe Noiret,Enzo Cannavale,Antonella Attili,Isa Danieli,230763,11990401
+Hotaru no haka,1988,89,"Animation, Drama, War",8.5,94.0,Isao Takahata,Tsutomu Tatsumi,Ayano Shiraishi,Akemi Yamaguchi,Yoshiko Shinohara,235231,
+Back to the Future,1985,116,"Adventure, Comedy, Sci-Fi",8.5,87.0,Robert Zemeckis,Michael J. Fox,Christopher Lloyd,Lea Thompson,Crispin Glover,1058081,210609762
+Once Upon a Time in the West,1968,165,Western,8.5,80.0,Sergio Leone,Henry Fonda,Charles Bronson,Claudia Cardinale,Jason Robards,302844,5321508

@@ -108,18 +108,16 @@ def query_engine():
                 # field, operator, and value
             
             # Sequential items in the parsed_query are to be intersected
-            # This intersection will occur either here or in the statement to
-            # the database
+            # This intersection will occur in the getData function
             docs = firebaseAuth.getData(parsed_query)
             
             for doc in docs:
-                print(f"{doc.id} => {doc.to_dict()}")
+                print(f"{doc.id}, {doc.to_dict()}")
             # Call a function to query the database with the values stored
             # in the parsed query
             # Receive a list of movie objects that fit the query,
             # print the title and year of each item
             
-            pass
             
             
         

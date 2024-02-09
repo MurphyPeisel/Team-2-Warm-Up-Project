@@ -5,4 +5,4 @@ df["runtime"] = df["runtime"].str.replace(" min","")
 df["gross"] = df["gross"].str.replace(",","")
 df = df.drop(columns=["certificate"])
 
-df.to_csv("imdb_edited.csv")
+# df.to_csv("imdb_edited.csv", index=False)

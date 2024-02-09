@@ -23,7 +23,7 @@ def parse_input(in_string):
     # queries are held in a list of dictionaries where each dictionary is a query with keys field, operator, value
     NUM_PARTS = 3 # number of parts in a query (field, operator, value)
     COMPOUND = " AND " # compound operator
-    SELECTOR = " WHERE "
+    SELECTOR = " WHERE " 
     ERROR = -1
 
     selected_fields = -1
@@ -32,8 +32,8 @@ def parse_input(in_string):
         return ERROR
     
     if in_string.count(SELECTOR) == 1:
+        # allow user to select which fields to return
         selected_fields_string, in_string = in_string.split(SELECTOR)
-        
         selected_fields = shlex.split(selected_fields_string)
         for field in selected_fields:
             if field not in FIELDS:

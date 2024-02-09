@@ -17,7 +17,9 @@ def parse_input(in_string):
     in_string -- input string
 
     Returns:
-    ERROR -- indicates an error has occurred (-1)
+    ERROR -- indicates an error has occurred (-1,-1)
+    or
+    selected_fields -- list of fields that the user wants to view, or -1 if no input
     parsed_query -- list of dictionaries where each dictionary is a subquery
     """
     # queries are held in a list of dictionaries where each dictionary is a query with keys field, operator, value
@@ -146,6 +148,7 @@ def query_engine():
                         print_string += f"{doc.to_dict()[field]}, "
                 # Print out the requested information
                 print(print_string)
+                # print(f"{doc.to_dict()}") # Print out everything
             
             
             

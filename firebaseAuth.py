@@ -5,11 +5,10 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 
 class Movie:
-    def __init__(self, title, year, certificate, runtime, genre, imdb_rating, meta_score,
+    def __init__(self, title, year, runtime, genre, imdb_rating, meta_score,
                  director, stars, num_votes, gross):
         self.title = title
         self.year = year
-        self.certificate = certificate
         self.runtime = runtime
         self.genre = genre
         self.imdb_rating = imdb_rating
@@ -24,7 +23,6 @@ class Movie:
         return Movie(
             title=source['title'],
             year=source['year'],
-            certificate=source['certificate'],
             runtime=source['runtime'],
             genre=source['genre'],
             imdb_rating=source['imdb_rating'],
@@ -39,7 +37,6 @@ class Movie:
         return {
             "title": self.title,
             "year": self.year,
-            "certificate": self.certificate,
             "runtime": self.runtime,
             "genre": self.genre,
             "imdb_rating": self.imdb_rating,
@@ -81,16 +78,4 @@ def getData(query_list):
     query = query.where(filter=FieldFilter(field, operator, value))
   docs = (query.stream())
 
-  # for doc in docs:
-  #     print(f"{doc.id} => {doc.to_dict()}")
-
   return docs
-
-# def main():
-#   query_list = [{'field': 'year', 'operator': '>', 'value': '1990'}, {'field': 'director', 'operator': '==', 'value': 'Christopher Nolan'}]
-#   # addDocument('movies.json')
-#   movies = getData(query_list)
-#   for movie in movies:
-#      print(f"{movie.id} => {movie.to_dict()}")
-
-# main()

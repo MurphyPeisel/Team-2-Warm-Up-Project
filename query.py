@@ -2,7 +2,7 @@ import shlex
 
 # initialize valid fields and operators list
 FIELDS = ["title", "year", "runtime", "genre", "imdb_rating", "director", "star1", 
-          "star2","star3", "star4", "num_votes", "certificate", "meta_score", "gross"]
+          "star2","star3", "star4", "num_votes", "meta_score", "gross"]
 OPERATORS = ["==", "!=", "<", "<=", ">", ">=", "contains"]
 
 def get_input(): 
@@ -91,8 +91,80 @@ def get_help():
     print(""""
     You've accessed the help screen [By entering "help" or "?"]
     
-    
-    
+    How to Search:
+        --------------------------------------------------------------------------------------------
+        Searching can be catagorized by one or more intervals of three parts. 
+        (FIELD) SPACE (OPERATOR) SPACE (VALUE) ... 
+        --------------------------------------------------------------------------------------------
+        Example One Parameter: 
+            ?? title > S   ENTER
+            This will provide all movies whos name is BELOW the VALUE
+        --------------------------------------------------------------------------------------------
+        Example Two Parameters:
+            ?? year > 1990 AND title == "Movie This One"
+                Understand, the year declaration will provide all movies whos year is ABOVE 1990.
+                This is different than how it works with strings. Be aware.
+            AND seperates the two search terms.
+                The final search term searches for a movie with the EXACT title as the VALUE. 
+                Note that the movie has multiple words, it must be within quotes to operate.
+            The output from this query would provide the movie 'Movie This One" from 1998.
+        --------------------------------------------------------------------------------------------
+    Possible Fields:
+        --------------------------------------------
+          *NOTE: All movies have these fields below.
+        --------------------------------------------
+          Known Fields:
+          title         :   Title of desired movie.
+          year          :   The release year with 4 digits XXXX.
+          runtime       :   Duration of a movie is in MINUTES. 
+          genre         :   The genre of a movie catagorizing by theme.
+          imdb_rating   :   Ratings given to movies by IMBD
+          director      :   Search by director and their film catalog.
+          star1         :   Search by the primary actor/actress, the movies they're in.
+          star2         :   Secondary actor/actress.
+          star3         :   Tertiary actor/actress.
+          star4         :   Quaternary actor/actress.
+          num_votes     :   The number of votes on a movie for IMBD ratings.
+        --------------------------------------------------------------------------------------------
+          *NOTE: Not all movies have all fields, below are fields where only some contain data for. 
+        --------------------------------------------------------------------------------------------    
+          Optional Fields:
+          meta_score    :   Ratings given to movies by Metacritic.
+          gross         :   Seach by how much money a movie made.
+          certificate   :   This is a rating given for audience appropriateness.
+        --------------------------------------------------------------------------------------------
+    Possible Operators:
+        --------------------------------------------------------------------------------------------
+          *NOTE: Strings and integers will work differently within these operations. 
+                 Please see the rules below for the clarifaction.
+        --------------------------------------------------------------------------------------------
+          ==            :   Find by exact match 
+          !=            :   Find everything except  
+          <             :   Find values less then.
+          <=            :   Find values equal to or less than 
+          >             :   Find values greater then 
+          >=            :   Find values equal to or greater than 
+          contains      :   Find that which includes value 
+        --------------------------------------------------------------------------------------------  
+    About Values:
+        --------------------------------------------------------------------------------------------
+          Values may range and vary depending on what the user is intending on searching. Thus, 
+          users must understand a couple rules and what may be accepted. Rules for values are 
+          listed below:
+        --------------------------------------------------------------------------------------------
+          1. Some values must be searched by as STRINGS, they are listed below:
+                Strings: title, genre, director, star1/2/3/4, and certificate.
+          2. Some values must be searched by as INTEGERS or DOUBLES, they are listed below:
+                Ints: year, runtime, votes, meta_score, and gross.
+                Double: imbd_rating
+          3. Querys are case sensitive, fields must be lowercase i.e. title, year, ...
+          4. Understand ints and strings work differently when using < > <= >= operators. 
+                Strings increase in weight from A-Z, thus Z is MORE than A.
+                    title > S, will show titles that start with S-Z not A-S.
+                Ints increase how one would expect, 1 is LESS than 2.
+                    year > 1990, will show movies that were made after 1990.
+        --------------------------------------------------------------------------------------------
+          
     Enter exit, stop, logout, quit, signout to stop the program
     """)
     

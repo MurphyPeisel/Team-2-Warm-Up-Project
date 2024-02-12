@@ -68,24 +68,7 @@ def getData(query_list):
     
     if field in ["year", "imdb_rating", "meta_score", "num_votes"]:
         value = int(value)
-        
-    # if operator == '<':
-    #     query = query.where(filter=FieldFilter(field, '<', value))
-    # elif operator == '==':
-    #     query = query.where(filter=FieldFilter(field, '==', value))
     query = query.where(filter=FieldFilter(field, operator, value))
   docs = (query.stream())
 
-  # for doc in docs:
-  #     print(f"{doc.id} => {doc.to_dict()}")
-
   return docs
-
-# def main():
-#   query_list = [{'field': 'year', 'operator': '>', 'value': '1990'}, {'field': 'director', 'operator': '==', 'value': 'Christopher Nolan'}]
-#   # addDocument('movies.json')
-#   movies = getData(query_list)
-#   for movie in movies:
-#      print(f"{movie.id} => {movie.to_dict()}")
-
-# main()

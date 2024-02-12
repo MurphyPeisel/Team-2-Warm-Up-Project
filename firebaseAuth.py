@@ -69,8 +69,10 @@ def getData(query_list):
     operator = query_info['operator']
     value = query_info['value']
     
-    if field in ["year", "imdb_rating", "meta_score", "num_votes"]:
+    if field in ["year", "meta_score", "num_votes"]:
         value = int(value)
+    if field == "imdb_rating":
+        value = float(value)
         
     # if operator == '<':
     #     query = query.where(filter=FieldFilter(field, '<', value))

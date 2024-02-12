@@ -66,7 +66,7 @@ def getData(query_list):
     operator = query_info['operator']
     value = query_info['value']
     
-    if field in ["year", "meta_score", "num_votes"]:
+    if field in ["year", "meta_score", "num_votes", "gross"]:
         value = int(value)
     if field == "imdb_rating":
         value = float(value)

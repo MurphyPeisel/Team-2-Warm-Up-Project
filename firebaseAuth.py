@@ -4,6 +4,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 
+# creating a movie class to define each movie as an object. Each movie is initialized with the following values.
 class Movie:
     def __init__(self, title, year, runtime, genre, imdb_rating, meta_score,
                  director, stars, num_votes, gross):
@@ -18,6 +19,7 @@ class Movie:
         self.num_votes = num_votes
         self.gross = gross
 
+    #
     @staticmethod
     def from_dict(source):
         return Movie(
@@ -59,16 +61,16 @@ app = firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 def getData(query_list):
-  movies_ref = db.collection("movies")
-  query = movies_ref
-  for query_info in query_list:
-    field = query_info['field']
-    operator = query_info['operator']
-    value = query_info['value']
-    
-    if field in ["year", "imdb_rating", "meta_score", "num_votes"]:
-        value = int(value)
-    query = query.where(filter=FieldFilter(field, operator, value))
-  docs = (query.stream())
+    movies_ref = db.collection("movies")
+    docs = {}
+    for query_info in query_list:
+        field = query_info['field']
+        operator = query_info['operator']
+        value = query_info['value']
 
-  return docs
+        if field in ["year", "imdb_rating", "meta_score", "num_votes"]:
+            value = int(value)
+        query = movies_ref.where(field, operator, value)
+    docs = query.stream()
+
+    return docs

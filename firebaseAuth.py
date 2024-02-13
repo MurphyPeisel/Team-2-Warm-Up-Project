@@ -62,13 +62,13 @@ db = firestore.client()
 
 def getData(query_list):
     movies_ref = db.collection("movies")
-    docs = {}
+    
     for query_info in query_list:
         field = query_info['field']
         operator = query_info['operator']
         value = query_info['value']
 
-        if field in ["year", "imdb_rating", "meta_score", "num_votes"]:
+        if field in ["year", "meta_score", "num_votes"]:
             value = int(value)
         if field == "imdb_rating":
             value = float(value)

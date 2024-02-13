@@ -63,6 +63,7 @@ db = firestore.client()
 def getData(query_list):
     movies_ref = db.collection("movies")
     docs_list = []
+    num_queries = 0
     for query_info in query_list:
         field = query_info['field']
         operator = query_info['operator']
@@ -75,22 +76,26 @@ def getData(query_list):
         query = movies_ref.where(field, operator, value)
         docs = query.stream()
         docs_list.append(docs)
+        num_queries += 1
 
     queried_movies = []
     single_query = []
     seen_ids = set()
-    for docs in docs_list:
-        for doc in docs:
-            if doc.id in seen_ids:
-                # if the id has been seen before, add the document to queried_movies
-                queried_movies.append(doc)
-            else:
-                # if the id is encountered for the first time, add it to the set of seen ids
-                seen_ids.add(doc.id)
-                single_query.append(doc)
 
-    if queried_movies == []:
-        for doc in single_query:
-            queried_movies.append(doc)
-    
+    if num_queries < 2:
+        for docs in docs_list:
+            for doc in docs:
+                queried_movies.append(doc)
+
+    if num_queries <= 2:
+        for docs in docs_list:
+            for doc in docs:
+                if doc.id in seen_ids:
+                    # if the id has been seen before, add the document to queried_movies
+                    queried_movies.append(doc)
+                else:
+                    # if the id is encountered for the first time, add it to the set of seen ids
+                    seen_ids.add(doc.id)
+                    single_query.append(doc)
+                  
     return queried_movies

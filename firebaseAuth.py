@@ -73,7 +73,7 @@ def getData(query_list):
             value = int(value)
         if field == "imdb_rating":
             value = float(value)
-        query = movies_ref.where(field, operator, value)
+        query = movies_ref.where(filter=FieldFilter(field, operator, value))
         docs = query.stream()
         docs_list.append(docs)
         num_queries += 1

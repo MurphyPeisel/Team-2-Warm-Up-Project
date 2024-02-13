@@ -70,6 +70,8 @@ def getData(query_list):
 
         if field in ["year", "imdb_rating", "meta_score", "num_votes"]:
             value = int(value)
+        if field == "imdb_rating":
+            value = float(value)
         query = movies_ref.where(field, operator, value)
     docs = query.stream()
 

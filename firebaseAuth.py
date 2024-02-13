@@ -77,6 +77,7 @@ def getData(query_list):
         docs_list.append(docs)
 
     queried_movies = []
+    single_query = []
     seen_ids = set()
     for docs in docs_list:
         for doc in docs:
@@ -86,6 +87,10 @@ def getData(query_list):
             else:
                 # if the id is encountered for the first time, add it to the set of seen ids
                 seen_ids.add(doc.id)
-    # for doc in queried_movies:
-    #     print(doc.id)
+                single_query.append(doc)
+
+    if queried_movies == []:
+        for doc in single_query:
+            queried_movies.append(doc)
+    
     return queried_movies

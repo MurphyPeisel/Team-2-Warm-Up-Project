@@ -40,6 +40,7 @@ def addDocument(json_file):
 
 valid = False
 while not valid:
+    # get filename from command line
     fileName = sys.argv[1]
     if fileName.__contains__(".json"):
         #if json file exists then prompt firebase actions

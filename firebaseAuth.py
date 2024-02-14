@@ -61,32 +61,41 @@ app = firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 def getData(query_list):
+    # initializing collection
     movies_ref = db.collection("movies")
     docs_list = []
+    # keeping track of numbers of queries
     num_queries = 0
+    # iterating through the list of queries
     for query_info in query_list:
+        # setting the fields operator and value
         field = query_info['field']
         operator = query_info['operator']
         value = query_info['value']
 
+        # handling different number values
         if field in ["year", "meta_score", "num_votes"]:
             value = int(value)
         if field == "imdb_rating":
             value = float(value)
+        # creating query object
         query = movies_ref.where(filter=FieldFilter(field, operator, value))
+        # adding query to documents dictionary
         docs = query.stream()
+        #adding documents to documents list
         docs_list.append(docs)
         num_queries += 1
 
+    # initializing empty lists and set
     queried_movies = []
     single_query = []
     seen_ids = set()
-
+    # case for only one query
     if num_queries < 2:
         for docs in docs_list:
             for doc in docs:
                 queried_movies.append(doc)
-
+    # case for two queries
     if num_queries == 2:
         for docs in docs_list:
             for doc in docs:
@@ -97,7 +106,7 @@ def getData(query_list):
                     # if the id is encountered for the first time, add it to the set of seen ids
                     seen_ids.add(doc.id)
                     single_query.append(doc)
-
+    #case for more than two queries
     if num_queries > 2:
         counts = {}
         # iterate through documents in docs_list

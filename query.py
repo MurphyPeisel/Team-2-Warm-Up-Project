@@ -3,6 +3,7 @@ import shlex
 # initialize valid fields and operators list
 FIELDS = ["title", "year", "runtime", "genre", "imdb_rating", "director", "star1", 
           "star2","star3", "star4", "num_votes", "meta_score", "gross"]
+NUMERIC_FIELDS = ["year", "meta_score", "num_votes", "gross", "runtime", "imdb_rating"]
 OPERATORS = ["==", "!=", "<", "<=", ">", ">="]
 
 def get_input(): 
@@ -37,9 +38,10 @@ def parse_input(in_string):
         # allow user to select which fields to return
         selected_fields_string, in_string = in_string.split(SELECTOR)
         selected_fields = shlex.split(selected_fields_string)
+        # Check that each field is valid
         for field in selected_fields:
             if field not in FIELDS:
-                print("ERROR -- Selected non-field before WHERE clause")
+                print(f"ERROR -- Selected non-field before WHERE clause. Offending field: {field}")
                 return ERROR
     
     query_list = in_string.split(COMPOUND)
@@ -56,8 +58,16 @@ def parse_input(in_string):
         query_value = query[2]
         # validate order of parts
         if query_field not in FIELDS or query_operator not in OPERATORS:
-            print("ERROR --  Invalid query structure: Please use command 'help' for help formatting queries.")
+            print(f"ERROR --  Invalid query structure: Please use command 'help' for help formatting queries. Offending query: {query_field} {query_operator} {query_value}")
             return ERROR
+        
+        # Ensure numeric fields have numeric values in queries
+        if query_field in NUMERIC_FIELDS:
+            try:
+                float(query_value)
+            except:
+                print(f"ERROR -- Invalid field value: Please use numeric values for numeric fields. Offending query: {query_field} {query_operator} {query_value}")
+                return ERROR
         # format query section as dictionary
         query_dict = {"field": query_field, "operator": query_operator, "value": query_value}
         # add to parsed query

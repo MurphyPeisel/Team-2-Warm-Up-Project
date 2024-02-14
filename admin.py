@@ -1,5 +1,6 @@
 import os.path
 import json
+import sys
 import firebaseAuth
         
 # this is the function for adding the json file to our collection
@@ -36,10 +37,10 @@ def addDocument(json_file):
         ).to_dict()
       )
 
-#Get json file name from user with validation
+
 valid = False
 while not valid:
-    fileName = input("Please provide the name of the JSON file (ex.name.json): ")
+    fileName = sys.argv[1]
     if fileName.__contains__(".json"):
         #if json file exists then prompt firebase actions
         if os.path.isfile(fileName):         
@@ -47,7 +48,11 @@ while not valid:
             #Delete all data that may exist in firestore
             #Load data(JSON) Fills our firestore database
             addDocument(fileName)
+            print("File added.")
         else:
             print("That file was not found, please try again...")
+            exit()
     else: 
         print("You didn't provide a .json file, try again...")
+        exit()
+      

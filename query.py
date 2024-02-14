@@ -206,6 +206,7 @@ def query_engine():
             # Receive a list of movie objects that fit the query,
             # print the title and year of each item
             for doc in docs:
+                
                 # By default, print the title
                 print_string = f"{doc.id}, "
                 

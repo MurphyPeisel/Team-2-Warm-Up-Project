@@ -74,7 +74,7 @@ def getData(query_list):
         value = query_info['value']
 
         # handling different number values
-        if field in ["year", "meta_score", "num_votes", "gross"]:
+        if field in ["year", "meta_score", "num_votes", "gross", "runtime"]:
             value = int(value)
         if field == "imdb_rating":
             value = float(value)

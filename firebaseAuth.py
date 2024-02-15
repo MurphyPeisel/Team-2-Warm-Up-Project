@@ -96,17 +96,6 @@ def getData(query_list):
             for doc in docs:
                 queried_movies.append(doc)
 
-    # if num_queries == 2:
-    #     for docs in docs_list:
-    #         for doc in docs:
-    #             if doc.id in seen_ids:
-    #                 # if the id has been seen before, add the document to queried_movies
-    #                 queried_movies.append(doc)
-    #             else:
-    #                 # if the id is encountered for the first time, add it to the set of seen ids
-    #                 seen_ids.add(doc.id)
-    #                 single_query.append(doc)
-
     if num_queries >= 2:
         counts = {}
         # iterate through documents in docs_list
